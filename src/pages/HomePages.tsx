@@ -53,12 +53,10 @@ export default function VideoEditingLanding() {
       const targets = { experience: 15, clients: 500, projects4k: 120, totalProjects: 500 }
       const duration = 2000
       const steps = 60
-
       Object.keys(targets).forEach((key) => {
         const target = targets[key as keyof typeof targets]
         const increment = target / steps
         let current = 0
-
         const timer = setInterval(() => {
           current += increment
           if (current >= target) {
@@ -70,7 +68,6 @@ export default function VideoEditingLanding() {
         console.log(counters)
       })
     }
-
     const observer = new IntersectionObserver(
       (entries) => {
         if (entries[0].isIntersecting) {
@@ -80,10 +77,8 @@ export default function VideoEditingLanding() {
       },
       { threshold: 0.5 },
     )
-
     const statsElement = document.getElementById("stats-section")
     if (statsElement) observer.observe(statsElement)
-
     return () => observer.disconnect()
   }, [])
 
@@ -99,7 +94,13 @@ export default function VideoEditingLanding() {
       title: "PROMO VIDEOS & ADS",
       icon: <Sparkles className="w-8 h-8" />,
       image: "/spi.jpg",
-      services: ["CONVERSION-FOCUSED", "MULTI-PLATFORM READY", "BRAND CONSISTENT", "CTA OPTIMIZATION", "PERFORMANCE DRIVEN"],
+      services: [
+        "CONVERSION-FOCUSED",
+        "MULTI-PLATFORM READY",
+        "BRAND CONSISTENT",
+        "CTA OPTIMIZATION",
+        "PERFORMANCE DRIVEN",
+      ],
       gradient: "from-blue-600/20 to-cyan-600/20",
     },
     {
@@ -195,7 +196,7 @@ export default function VideoEditingLanding() {
     {
       question: "Can you handle multiple content creators?",
       answer:
-        "Absolutely! We work with agencies, teams, and multi-creator brands. Each creator gets a dedicated editor who understands their unique style and audience.",
+        "We work with agencies, teams, and multi-creator brands. Each creator gets a dedicated editor who understands their unique style and audience.",
     },
     {
       question: "How do you stay on top of trends?",
@@ -220,15 +221,23 @@ export default function VideoEditingLanding() {
                 <div className="text-xs text-gray-400 font-normal">Craft moments that move</div>
               </div>
             </div>
-
             <div className="hidden md:flex items-center space-x-8">
               {[
-                { name: "SERVICES", action: () => document.getElementById('services-section')?.scrollIntoView({ behavior: 'smooth' }) },
-                { name: "PORTFOLIO", action: () => document.getElementById('portfolio-section')?.scrollIntoView({ behavior: 'smooth' }) },
-                { name: "FAQ", action: () => document.getElementById('faq-section')?.scrollIntoView({ behavior: 'smooth' }) },
+                {
+                  name: "SERVICES",
+                  action: () => document.getElementById("services-section")?.scrollIntoView({ behavior: "smooth" }),
+                },
+                {
+                  name: "PORTFOLIO",
+                  action: () => document.getElementById("portfolio-section")?.scrollIntoView({ behavior: "smooth" }),
+                },
+                {
+                  name: "FAQ",
+                  action: () => document.getElementById("faq-section")?.scrollIntoView({ behavior: "smooth" }),
+                },
               ].map((item) => (
                 <div key={item.name} className="group relative">
-                  <button 
+                  <button
                     onClick={item.action}
                     className="text-white hover:text-red-500 transition-colors duration-300 font-semibold"
                   >
@@ -237,13 +246,11 @@ export default function VideoEditingLanding() {
                 </div>
               ))}
             </div>
-
             <div className="hidden md:flex items-center space-x-4">
               <Button className="border-2 border-red-500 text-red-500 hover:bg-red-500 hover:text-white px-6 py-2 rounded-full font-bold transition-all duration-300 bg-transparent">
                 GET FREE DEMO
               </Button>
             </div>
-
             <div className="md:hidden">
               <Button variant="ghost" size="icon" onClick={() => setIsMenuOpen(!isMenuOpen)}>
                 {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
@@ -251,15 +258,32 @@ export default function VideoEditingLanding() {
             </div>
           </div>
         </div>
-
         {/* Mobile menu */}
         {isMenuOpen && (
           <div className="md:hidden bg-black/95 backdrop-blur-xl border-t border-red-500/20">
             <div className="px-4 pt-4 pb-6 space-y-4">
               {[
-                { name: "SERVICES", action: () => { setIsMenuOpen(false); document.getElementById('services-section')?.scrollIntoView({ behavior: 'smooth' }); } },
-                { name: "PORTFOLIO", action: () => { setIsMenuOpen(false); document.getElementById('portfolio-section')?.scrollIntoView({ behavior: 'smooth' }); } },
-                { name: "FAQ", action: () => { setIsMenuOpen(false); document.getElementById('faq-section')?.scrollIntoView({ behavior: 'smooth' }); } },
+                {
+                  name: "SERVICES",
+                  action: () => {
+                    setIsMenuOpen(false)
+                    document.getElementById("services-section")?.scrollIntoView({ behavior: "smooth" })
+                  },
+                },
+                {
+                  name: "PORTFOLIO",
+                  action: () => {
+                    setIsMenuOpen(false)
+                    document.getElementById("portfolio-section")?.scrollIntoView({ behavior: "smooth" })
+                  },
+                },
+                {
+                  name: "FAQ",
+                  action: () => {
+                    setIsMenuOpen(false)
+                    document.getElementById("faq-section")?.scrollIntoView({ behavior: "smooth" })
+                  },
+                },
               ].map((item) => (
                 <button
                   key={item.name}
@@ -276,19 +300,29 @@ export default function VideoEditingLanding() {
 
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center overflow-hidden">
+        {/* Background Video */}
+        <div className="absolute inset-0 z-0">
+          <video autoPlay muted loop playsInline className="absolute inset-0 w-full h-full object-cover opacity-30">
+            <source src="/video.mp4" type="video/mp4" />
+            {/* Fallback for browsers that don't support the video format */}
+            Your browser does not support the video tag.
+          </video>
+          {/* Video overlay to ensure text readability */}
+          <div className="absolute inset-0 bg-black/60"></div>
+        </div>
+
         {/* Background Effects */}
-        <div className="absolute inset-0">
-          <div className="absolute inset-0 bg-gradient-to-br from-red-900/20 via-black to-gray-900"></div>
+        <div className="absolute inset-0 z-10">
+          <div className="absolute inset-0 bg-gradient-to-br from-red-900/20 via-black/50 to-gray-900/50"></div>
           <div className="absolute inset-0">
             <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-red-500/10 rounded-full filter blur-3xl animate-pulse"></div>
             <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-red-600/10 rounded-full filter blur-3xl animate-pulse delay-1000"></div>
           </div>
-
           {/* Grid Pattern */}
           <div className="absolute inset-0 bg-grid-red opacity-10"></div>
         </div>
 
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32">
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32 z-20">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div className="space-y-8 animate-fade-in-up">
               <div className="space-y-6">
@@ -302,14 +336,11 @@ export default function VideoEditingLanding() {
                   <br />
                   THAT MOVE.
                 </h1>
-
                 <p className="text-xl text-gray-300 leading-relaxed max-w-lg">
                   From Reels to Promos — we help creators and agencies turn raw clips into scroll-stopping content.
                 </p>
-
                 <p className="text-lg text-red-400 font-semibold">Every Frame. A Feeling.</p>
               </div>
-
               <div className="flex flex-col sm:flex-row gap-6">
                 <Button className="group bg-gradient-to-r from-red-500 to-red-600 hover:from-red-600 hover:to-red-700 text-white px-10 py-4 text-lg rounded-full font-bold shadow-2xl hover:shadow-red-500/25 transition-all duration-500 hover:scale-105 glow-red">
                   GET A FREE DEMO
@@ -322,7 +353,6 @@ export default function VideoEditingLanding() {
                   VIEW OUR WORK
                 </Button>
               </div>
-
               {/* Contact Options */}
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4 pt-8">
                 {[
@@ -346,15 +376,11 @@ export default function VideoEditingLanding() {
                 ))}
               </div>
             </div>
-
-            <div className="relative animate-slide-in-right">
+            
+            <div className="relative animate-slide-in-right z-20">
               <div className="relative group">
                 <div className="relative overflow-hidden">
-                  <img
-                    src="/front.png"
-                    alt="Content Portfolio 2025"
-                    className="w-full max-h-[600px] object-cover"
-                  />
+                  <img src="/front.png" alt="Content Portfolio 2025" className="w-full max-h-[600px] object-cover" />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent pointer-events-none"></div>
                 </div>
               </div>

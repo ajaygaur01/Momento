@@ -127,49 +127,39 @@
   .animate-fade-in-up {
     animation: fadeInUp 1.2s ease-out;
   }
-
   .animate-slide-in-right {
     animation: slideInRight 1.2s ease-out;
   }
-
   .animate-glow {
     animation: glow 2s ease-in-out infinite alternate;
   }
-
   /* Red Glow Effect */
   .glow-red {
     box-shadow: 0 0 20px rgba(239, 68, 68, 0.3), 0 0 40px rgba(239, 68, 68, 0.1);
   }
-
   .glow-red:hover {
     box-shadow: 0 0 30px rgba(239, 68, 68, 0.5), 0 0 60px rgba(239, 68, 68, 0.2);
   }
-
   /* Grid Pattern */
   .bg-grid-red {
     background-image: linear-gradient(rgba(239, 68, 68, 0.1) 1px, transparent 1px),
       linear-gradient(90deg, rgba(239, 68, 68, 0.1) 1px, transparent 1px);
     background-size: 50px 50px;
   }
-
   /* Custom Scrollbar */
   ::-webkit-scrollbar {
     width: 8px;
   }
-
   ::-webkit-scrollbar-track {
     background: #111111;
   }
-
   ::-webkit-scrollbar-thumb {
     background: #ef4444;
     border-radius: 4px;
   }
-
   ::-webkit-scrollbar-thumb:hover {
     background: #dc2626;
   }
-
   @keyframes fadeInUp {
     from {
       opacity: 0;
@@ -180,7 +170,6 @@
       transform: translateY(0);
     }
   }
-
   @keyframes slideInRight {
     from {
       opacity: 0;
@@ -191,7 +180,6 @@
       transform: translateX(0);
     }
   }
-
   @keyframes glow {
     from {
       text-shadow: 0 0 10px rgba(239, 68, 68, 0.5), 0 0 20px rgba(239, 68, 68, 0.3);
@@ -200,18 +188,15 @@
       text-shadow: 0 0 20px rgba(239, 68, 68, 0.8), 0 0 30px rgba(239, 68, 68, 0.5);
     }
   }
-
   /* Smooth scrolling */
   html {
     scroll-behavior: smooth;
   }
-
   /* Text selection */
   ::selection {
     background: rgba(239, 68, 68, 0.3);
     color: white;
   }
-
   /* Focus styles */
   button:focus-visible,
   a:focus-visible {
