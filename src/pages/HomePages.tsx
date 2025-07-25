@@ -828,7 +828,7 @@ export default function VideoEditingLanding() {
         </div>
       </footer>
 
-      {/* Sticky Chat Button */}
+      {/* Sticky Chat Button yup*/}
       <div className="fixed bottom-8 right-8 z-50">
         <Button 
           className="w-16 h-16 rounded-full bg-gradient-to-r from-red-500 to-red-600 hover:from-red-600 hover:to-red-700 text-white shadow-2xl hover:shadow-red-500/50 transition-all duration-300 hover:scale-110 animate-bounce glow-red"
