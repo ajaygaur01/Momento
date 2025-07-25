@@ -388,7 +388,7 @@ export default function VideoEditingLanding() {
           </div>
         </div>
       </section>
-
+{/* Stats Section */}
       {/* Who We Help Section */}
       <section id="stats-section" className="py-20 relative overflow-hidden">
         {/* Background Video */}
