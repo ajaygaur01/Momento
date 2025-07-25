@@ -1,5 +1,5 @@
 
-import React, { useState, useEffect } from "react"
+import { useState, useEffect } from "react"
 import { Button } from "../components/ui/button"
 import { Card, CardContent } from "../components/ui/card"
 import { Badge } from "../components/ui/badge"
@@ -67,6 +67,7 @@ export default function VideoEditingLanding() {
           }
           setCounters((prev) => ({ ...prev, [key]: Math.floor(current) }))
         }, duration / steps)
+        console.log(counters)
       })
     }
 
