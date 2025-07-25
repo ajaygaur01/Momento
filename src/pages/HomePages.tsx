@@ -28,8 +28,14 @@ import {
   MessageCircle,
   Zap,
 } from "lucide-react"
+import { redirect } from "react-router-dom"
+import { useNavigate } from "react-router-dom";
+
+
 
 export default function VideoEditingLanding() {
+  const navigate = useNavigate();
+
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
   const [counters, setCounters] = useState({
@@ -227,6 +233,10 @@ export default function VideoEditingLanding() {
                   name: "SERVICES",
                   action: () => document.getElementById("services-section")?.scrollIntoView({ behavior: "smooth" }),
                 },
+                 {
+                  name: "ABOUT US",
+                  action: () => navigate("/about"), // Redirect to About page
+                },
                 {
                   name: "PORTFOLIO",
                   action: () => document.getElementById("portfolio-section")?.scrollIntoView({ behavior: "smooth" }),
@@ -278,11 +288,20 @@ export default function VideoEditingLanding() {
                   },
                 },
                 {
+                  name: "About Us",
+                  action: () => {
+                    navigate("/about") // Redirect to About page
+                  },
+                },
+                
+                
+                {
                   name: "FAQ",
                   action: () => {
                     setIsMenuOpen(false)
                     document.getElementById("faq-section")?.scrollIntoView({ behavior: "smooth" })
                   },
+                  
                 },
               ].map((item) => (
                 <button
