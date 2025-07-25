@@ -412,7 +412,7 @@ export default function VideoEditingLanding() {
         {/* Background Video */}
         <div className="absolute inset-0 z-0">
           <video autoPlay muted loop playsInline className="transform: rotate(180deg); absolute inset-0 w-full h-full object-cover opacity-100">
-            <source src="/video2.mp4" type="video/mp4" />
+            <source src="/video.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
           {/* Video overlay */}
