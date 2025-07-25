@@ -28,10 +28,9 @@ import {
   MessageCircle,
   Zap,
 } from "lucide-react"
-import { redirect } from "react-router-dom"
 import { useNavigate } from "react-router-dom";
 
-
+//hello
 
 export default function VideoEditingLanding() {
   const navigate = useNavigate();
