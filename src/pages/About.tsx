@@ -148,7 +148,27 @@ export default function AboutSection() {
             work, meet the minds behind the lens.
           </p>
         </div>
-
+<div
+          className={`text-center mb-16 transition-all duration-1000 delay-500 ${
+            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+          }`}
+        >
+          <Button
+            onClick={() => (window.location.href = "/")}
+            className="group bg-gradient-to-r from-red-500 to-red-600 hover:from-red-600 hover:to-red-700 text-white px-8 py-3 text-lg rounded-full font-bold shadow-2xl hover:shadow-red-500/25 transition-all duration-500 hover:scale-105 glow-red border-2 border-red-500/20 hover:border-red-400"
+          >
+            <svg
+              className="w-5 h-5 mr-2 group-hover:-translate-x-1 transition-transform duration-300"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+            </svg>
+            GET BACK TO HOME
+            <div className="absolute inset-0 rounded-full bg-gradient-to-r from-red-400/20 to-red-600/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-xl"></div>
+          </Button>
+        </div>
         {/* Team Grid */}
         <div className="grid lg:grid-cols-3 gap-8">
           {teamMembers.map((member, index) => (

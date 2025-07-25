@@ -183,10 +183,20 @@ export default function VideoEditingLanding() {
   ]
 
   const faqs = [
-    {
-      question: "How fast is your turnaround time?",
+     {
+      question: "Will my videos be kept confidential?",
       answer:
-        "We deliver most projects within 24-72 hours. Rush orders can be completed same-day for an additional fee. Our dedicated editors ensure quality without compromising speed.",
+        "Absolutely. Your content stays private and secure. We don’t use or share your videos without your permission.",
+    },
+     {
+      question: "How do I share my footage with you?",
+      answer:
+        "You can upload your files via Google Drive, we'll create a shared folder for you.",
+    },
+     {
+      question: "Do you offer one-time or custom projects?",
+      answer:
+        "Yes, we do offer custom video editing quotes for unique projects, events, brand campaigns, or YouTube videos. Just send us your requirements!",
     },
     {
       question: "Do you really offer unlimited revisions?",
@@ -202,11 +212,6 @@ export default function VideoEditingLanding() {
       question: "Can you handle multiple content creators?",
       answer:
         "We work with agencies, teams, and multi-creator brands. Each creator gets a dedicated editor who understands their unique style and audience.",
-    },
-    {
-      question: "How do you stay on top of trends?",
-      answer:
-        "Our creative team constantly monitors trending formats, sounds, and editing styles across all platforms. We adapt quickly to ensure your content stays relevant and engaging.",
     },
   ]
 
@@ -256,7 +261,11 @@ export default function VideoEditingLanding() {
               ))}
             </div>
             <div className="hidden md:flex items-center space-x-4">
-              <Button className="border-2 border-red-500 text-red-500 hover:bg-red-500 hover:text-white px-6 py-2 rounded-full font-bold transition-all duration-300 bg-transparent">
+              <Button 
+              onClick={() => {
+                 window.location.href = "https://wa.me/919001120595?text=Hello%20Momento.buzz,%20I%20want%20to%20create%20scroll-stopping%20content!";
+              }}
+              className="border-2 border-red-500 text-red-500 hover:bg-red-500 hover:text-white px-6 py-2 rounded-full font-bold transition-all duration-300 bg-transparent">
                 GET FREE DEMO
               </Button>
             </div>
@@ -360,7 +369,12 @@ export default function VideoEditingLanding() {
                 <p className="text-lg text-red-400 font-semibold">Every Frame. A Feeling.</p>
               </div>
               <div className="flex flex-col sm:flex-row gap-6">
-                <Button className="group bg-gradient-to-r from-red-500 to-red-600 hover:from-red-600 hover:to-red-700 text-white px-10 py-4 text-lg rounded-full font-bold shadow-2xl hover:shadow-red-500/25 transition-all duration-500 hover:scale-105 glow-red">
+                <Button
+                onClick={() => {
+                 window.location.href = "https://wa.me/919001120595?text=Hello%20Momento.buzz,%20I%20want%20to%20create%20scroll-stopping%20content!";
+              }}
+                
+                className="group bg-gradient-to-r from-red-500 to-red-600 hover:from-red-600 hover:to-red-700 text-white px-10 py-4 text-lg rounded-full font-bold shadow-2xl hover:shadow-red-500/25 transition-all duration-500 hover:scale-105 glow-red">
                   GET A FREE DEMO
                   <Zap className="ml-2 w-5 h-5 group-hover:rotate-12 transition-transform duration-300" />
                 </Button>
@@ -749,7 +763,12 @@ export default function VideoEditingLanding() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
-            <Button className="bg-gradient-to-r from-red-500 to-red-600 hover:from-red-600 hover:to-red-700 text-white px-12 py-6 text-xl rounded-full font-black shadow-2xl hover:shadow-red-500/25 transition-all duration-500 hover:scale-110 glow-red uppercase tracking-wider">
+            <Button
+            onClick={() => {
+                 window.location.href = "https://wa.me/919001120595?text=Hello%20Momento.buzz,%20I%20want%20to%20create%20scroll-stopping%20content!";
+              }}
+            
+            className="bg-gradient-to-r from-red-500 to-red-600 hover:from-red-600 hover:to-red-700 text-white px-12 py-6 text-xl rounded-full font-black shadow-2xl hover:shadow-red-500/25 transition-all duration-500 hover:scale-110 glow-red uppercase tracking-wider">
               GET FREE DEMO NOW
             </Button>
             <Button
