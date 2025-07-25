@@ -1,19 +1,23 @@
-"use client"
 
-import { useState, useEffect } from "react"
+import React, { useState, useEffect } from "react"
 import { Button } from "../components/ui/button"
 import { Card, CardContent } from "../components/ui/card"
 import { Badge } from "../components/ui/badge"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "../components/ui/accordion"
 import {
-  Star,
   Menu,
   X,
+  Film,
+  Sparkles,
+  Headphones,
+  Award,
+  Users,
+  Monitor,
   Upload,
   Edit,
   Eye,
   Download,
-  MessageCircle,
+  Star,
   Phone,
   Mail,
   MapPin,
@@ -21,13 +25,8 @@ import {
   Twitter,
   Linkedin,
   Youtube,
+  MessageCircle,
   Zap,
-  Film,
-  Headphones,
-  Monitor,
-  Sparkles,
-  Award,
-  Users,
 } from "lucide-react"
 
 export default function VideoEditingLanding() {
@@ -89,62 +88,62 @@ export default function VideoEditingLanding() {
 
   const services = [
     {
-      title: "VIDEO SERVICES",
+      title: "REELS & SHORTS",
       icon: <Film className="w-8 h-8" />,
       image: "/john.jpg",
-      services: ["COLOR CORRECTION", "TITLING", "SUBTITLING", "EDITORIAL", "STORYBOARDING"],
+      services: ["TREND-BASED EDITS", "3-SECOND HOOKS", "VIRAL FORMATS", "PLATFORM OPTIMIZATION", "QUICK TURNAROUNDS"],
       gradient: "from-red-600/20 to-pink-600/20",
     },
     {
-      title: "VISUAL EFFECTS",
+      title: "PROMO VIDEOS & ADS",
       icon: <Sparkles className="w-8 h-8" />,
       image: "/spi.jpg",
-      services: ["ROTOSCOPING", "CHROMA REMOVAL", "MOTION GRAPHICS", "BEAUTY CLEANUP", "ANIMATION"],
+      services: ["CONVERSION-FOCUSED", "MULTI-PLATFORM READY", "BRAND CONSISTENT", "CTA OPTIMIZATION", "PERFORMANCE DRIVEN"],
       gradient: "from-blue-600/20 to-cyan-600/20",
     },
     {
-      title: "Web and App Development",
+      title: "CONTENT REPURPOSING",
       icon: <Headphones className="w-8 h-8" />,
       image: "/code.jpg",
-      services: ["FullStack Development", "Mobile apps Development", "UI/UX"],
+      services: ["LONG-FORM TO CLIPS", "MULTI-FORMAT DELIVERY", "BATCH PROCESSING", "STORY ARCS", "ENGAGEMENT HOOKS"],
       gradient: "from-green-600/20 to-emerald-600/20",
     },
   ]
 
   const categories = [
-    { name: "Corporate Video", image: "/placeholder.svg?height=200&width=300" },
-    { name: "Product Demo", image: "/placeholder.svg?height=200&width=300" },
-    { name: "Interview", image: "/placeholder.svg?height=200&width=300" },
-    { name: "Sales Pitch", image: "/placeholder.svg?height=200&width=300" },
-    { name: "VR Content", image: "/placeholder.svg?height=200&width=300" },
-    { name: "Testimonial", image: "/placeholder.svg?height=200&width=300" },
-    { name: "Sports", image: "/placeholder.svg?height=200&width=300" },
-    { name: "Real Estate", image: "/placeholder.svg?height=200&width=300" },
+    { name: "Influencer Content", image: "/placeholder.svg?height=200&width=300" },
+    { name: "Marketing Teams", image: "/placeholder.svg?height=200&width=300" },
+    { name: "YouTube Creators", image: "/placeholder.svg?height=200&width=300" },
+    { name: "Personal Brands", image: "/placeholder.svg?height=200&width=300" },
+    { name: "Coaches & Founders", image: "/placeholder.svg?height=200&width=300" },
+    { name: "Podcast Clips", image: "/placeholder.svg?height=200&width=300" },
+    { name: "Thought Leadership", image: "/placeholder.svg?height=200&width=300" },
+    { name: "Course Content", image: "/placeholder.svg?height=200&width=300" },
   ]
 
   const testimonials = [
     {
-      name: "Sarah Johnson",
-      role: "GRAPHICS MANAGER",
-      company: "Electronics Company, South Korea",
+      name: "@influencer.name",
+      role: "CONTENT CREATOR",
+      company: "Personal Brand",
       rating: 5,
-      text: "Quick turnaround and quality of services has helped my company reap immense profits. Support level and understanding have overwhelmed me.",
+      text: "They saved us 10+ hours a week — now our content is consistent and impactful. Game changer for my brand!",
       avatar: "/placeholder.svg?height=80&width=80",
     },
     {
-      name: "Michael Chen",
-      role: "CHIEF PRODUCTION MANAGER",
-      company: "Pharmaceutical Company, Netherlands",
+      name: "Digital Agency Pro",
+      role: "MARKETING DIRECTOR",
+      company: "Digital Marketing Agency",
       rating: 5,
-      text: "From companies across the globe, different quotes, the quality during the trial period helped us decide our new partner. Quality was exceptional.",
+      text: "Our conversions doubled after using their ad creatives. Insane quality! The ROI speaks for itself.",
       avatar: "/placeholder.svg?height=80&width=80",
     },
     {
-      name: "Emma Davis",
-      role: "PRODUCTION MANAGER",
-      company: "Educational Video Company, UK",
+      name: "Coach Sarah",
+      role: "BUSINESS COACH",
+      company: "Online Coaching Business",
       rating: 5,
-      text: "It's wonderful, thank you - a really good edit. I know it can't be easy working on these files when there's so many mistakes and retakes!",
+      text: "From one long video to 20 engaging clips - they help me stay consistent across all platforms effortlessly.",
       avatar: "/placeholder.svg?height=80&width=80",
     },
   ]
@@ -152,55 +151,55 @@ export default function VideoEditingLanding() {
   const workflowSteps = [
     {
       step: "1",
-      title: "UPLOAD VIA FTP",
-      description: "YOU GIVE THE BRIEF & UPLOAD THE FILE VIA FTP",
+      title: "UPLOAD YOUR CONTENT",
+      description: "SEND US YOUR RAW FOOTAGE & BRIEF",
       icon: <Upload className="w-8 h-8" />,
     },
     {
       step: "2",
-      title: "VIDEO EDITING PROCESS",
-      description: "WE EDIT THE VIDEO ACCORDING TO THE BRIEF",
+      title: "WE CRAFT & EDIT",
+      description: "TREND-AWARE EDITING WITH PURPOSE",
       icon: <Edit className="w-8 h-8" />,
     },
     {
       step: "3",
-      title: "REVIEW AND APPROVAL",
-      description: "YOU REVIEW THE FINAL OUTPUT FOR APPROVAL",
+      title: "REVIEW & REVISE",
+      description: "UNLIMITED REVISIONS UNTIL PERFECT",
       icon: <Eye className="w-8 h-8" />,
     },
     {
       step: "4",
-      title: "DOWNLOAD FINAL OUTPUT",
-      description: "EDITED FILE READY TO DOWNLOAD VIA FTP",
+      title: "PUBLISH & GROW",
+      description: "SCROLL-STOPPING CONTENT READY TO GO",
       icon: <Download className="w-8 h-8" />,
     },
   ]
 
   const faqs = [
     {
-      question: "What video formats do you support?",
+      question: "How fast is your turnaround time?",
       answer:
-        "We support all major video formats including MP4, MOV, AVI, MKV, ProRes, and many more. Our team works with industry-standard software to ensure compatibility.",
+        "We deliver most projects within 24-72 hours. Rush orders can be completed same-day for an additional fee. Our dedicated editors ensure quality without compromising speed.",
     },
     {
-      question: "What resolution can you work with?",
+      question: "Do you really offer unlimited revisions?",
       answer:
-        "We handle everything from SD to 8K resolution. Our team specializes in 4K projects and can upscale or downscale as needed for your specific requirements.",
+        "Yes! On our monthly plans, you get unlimited revisions until you're 100% satisfied. We want your content to be perfect and perform well.",
     },
     {
-      question: "What software do you use?",
+      question: "What platforms do you optimize content for?",
       answer:
-        "We use professional software including Adobe Premiere Pro, After Effects, DaVinci Resolve, Avid Media Composer, and other industry-standard tools.",
+        "We create content optimized for Instagram Reels, TikTok, YouTube Shorts, LinkedIn, Twitter, Facebook, and any custom specifications you need.",
     },
     {
-      question: "Do you provide color grading services?",
+      question: "Can you handle multiple content creators?",
       answer:
-        "Yes, we offer professional color grading and color correction services to enhance the visual appeal and maintain consistency throughout your video content.",
+        "Absolutely! We work with agencies, teams, and multi-creator brands. Each creator gets a dedicated editor who understands their unique style and audience.",
     },
     {
-      question: "What VFX capabilities do you have?",
+      question: "How do you stay on top of trends?",
       answer:
-        "Our VFX team specializes in compositing, motion graphics, 3D animation, green screen removal, rotoscoping, and advanced visual effects using industry-leading software.",
+        "Our creative team constantly monitors trending formats, sounds, and editing styles across all platforms. We adapt quickly to ensure your content stays relevant and engaging.",
     },
   ]
 
@@ -216,16 +215,16 @@ export default function VideoEditingLanding() {
           <div className="flex justify-between items-center h-20">
             <div className="flex items-center">
               <div className="text-2xl font-black tracking-wider">
-                MOM<span className="text-red-500">ENTO</span>
-                <div className="text-xs text-gray-400 font-normal">Your editor on-call</div>
+                MOMENTO<span className="text-red-500">.BUZZ</span>
+                <div className="text-xs text-gray-400 font-normal">Craft moments that move</div>
               </div>
             </div>
 
             <div className="hidden md:flex items-center space-x-8">
               {[
                 { name: "SERVICES", action: () => document.getElementById('services-section')?.scrollIntoView({ behavior: 'smooth' }) },
+                { name: "PORTFOLIO", action: () => document.getElementById('portfolio-section')?.scrollIntoView({ behavior: 'smooth' }) },
                 { name: "FAQ", action: () => document.getElementById('faq-section')?.scrollIntoView({ behavior: 'smooth' }) },
-                { name: "ABOUT US", action: () => window.location.href = '/about' }
               ].map((item) => (
                 <div key={item.name} className="group relative">
                   <button 
@@ -240,7 +239,7 @@ export default function VideoEditingLanding() {
 
             <div className="hidden md:flex items-center space-x-4">
               <Button className="border-2 border-red-500 text-red-500 hover:bg-red-500 hover:text-white px-6 py-2 rounded-full font-bold transition-all duration-300 bg-transparent">
-                +91 90011 20595
+                GET FREE DEMO
               </Button>
             </div>
 
@@ -258,8 +257,8 @@ export default function VideoEditingLanding() {
             <div className="px-4 pt-4 pb-6 space-y-4">
               {[
                 { name: "SERVICES", action: () => { setIsMenuOpen(false); document.getElementById('services-section')?.scrollIntoView({ behavior: 'smooth' }); } },
+                { name: "PORTFOLIO", action: () => { setIsMenuOpen(false); document.getElementById('portfolio-section')?.scrollIntoView({ behavior: 'smooth' }); } },
                 { name: "FAQ", action: () => { setIsMenuOpen(false); document.getElementById('faq-section')?.scrollIntoView({ behavior: 'smooth' }); } },
-                { name: "ABOUT US", action: () => { setIsMenuOpen(false); window.location.href = '/about'; } }
               ].map((item) => (
                 <button
                   key={item.name}
@@ -293,44 +292,43 @@ export default function VideoEditingLanding() {
             <div className="space-y-8 animate-fade-in-up">
               <div className="space-y-6">
                 <h1 className="text-6xl lg:text-7xl font-black uppercase leading-tight tracking-wider">
-                  PROFESSIONAL VIDEO
+                  WE DON'T JUST EDIT
                   <br />
-                  EDITING &{" "}
+                  VIDEOS. WE{" "}
                   <span className="text-transparent bg-gradient-to-r from-red-500 to-red-600 bg-clip-text">
-                  WEBAPP CREATION
+                    CRAFT MOMENTS
                   </span>
                   <br />
-                  SERVICES
+                  THAT MOVE.
                 </h1>
 
                 <p className="text-xl text-gray-300 leading-relaxed max-w-lg">
-                  Momento is a leading video editing and Development outsourcing partner to video content
-                  creators and production houses worldwide
+                  From Reels to Promos — we help creators and agencies turn raw clips into scroll-stopping content.
                 </p>
 
-                <p className="text-lg text-red-400 font-semibold">Your on-call editor for cinematic precision.</p>
+                <p className="text-lg text-red-400 font-semibold">Every Frame. A Feeling.</p>
               </div>
 
               <div className="flex flex-col sm:flex-row gap-6">
                 <Button className="group bg-gradient-to-r from-red-500 to-red-600 hover:from-red-600 hover:to-red-700 text-white px-10 py-4 text-lg rounded-full font-bold shadow-2xl hover:shadow-red-500/25 transition-all duration-500 hover:scale-105 glow-red">
-                  GET FREE TRIAL
+                  GET A FREE DEMO
                   <Zap className="ml-2 w-5 h-5 group-hover:rotate-12 transition-transform duration-300" />
                 </Button>
                 <Button
                   variant="outline"
                   className="border-2 border-red-500 text-red-500 hover:bg-red-500/10 px-10 py-4 text-lg rounded-full font-bold transition-all duration-500 hover:scale-105 bg-transparent"
                 >
-                  VIEW PORTFOLIO
+                  VIEW OUR WORK
                 </Button>
               </div>
 
               {/* Contact Options */}
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4 pt-8">
                 {[
-                  // { icon: <Phone className="w-5 h-5" />, label: "CONTACT" },
-                  { icon: <Phone className="w-5 h-5" />, label: "+91 90011 20595" },
-                  // { icon: <MessageCircle className="w-5 h-5"/>, label: "CHAT" },
+                  { icon: <Phone className="w-5 h-5" />, label: "CALL US" },
+                  { icon: <MessageCircle className="w-5 h-5" />, label: "CHAT NOW" },
                   { icon: <Mail className="w-5 h-5" />, label: "EMAIL" },
+                  { icon: <Zap className="w-5 h-5" />, label: "24-72HR" },
                 ].map((item, index) => (
                   <Button
                     key={index}
@@ -353,7 +351,7 @@ export default function VideoEditingLanding() {
                 <div className="relative overflow-hidden">
                   <img
                     src="/front.png"
-                    alt="Showreel 2025"
+                    alt="Content Portfolio 2025"
                     className="w-full max-h-[600px] object-cover"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent pointer-events-none"></div>
@@ -364,30 +362,71 @@ export default function VideoEditingLanding() {
         </div>
       </section>
 
-      {/* Stats Section */}
+      {/* Who We Help Section */}
       <section id="stats-section" className="py-20 bg-gradient-to-b from-black to-gray-900 relative">
         <div className="absolute inset-0 bg-grid-red opacity-5"></div>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-          <div className="grid md:grid-cols-4 gap-8">
+          <div className="text-center mb-16">
+            <h2 className="text-5xl font-black uppercase mb-6 tracking-wider">
+              BUILT FOR CREATORS WHO WANT
+              <br />
+              MORE THAN JUST <span className="text-red-500">LIKES</span>
+            </h2>
+            <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed">
+              No editing apps. No burnout. Just pro-level content, done for you.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
             {[
               {
-                number: counters.experience,
-                suffix: "+",
-                label: "Years of Experience",
+                title: "Influencers & Personal Brands",
+                description: "Grow faster with standout content",
+                icon: <Users className="w-8 h-8" />,
+              },
+              {
+                title: "Marketing Teams",
+                description: "Scale with reliable, on-brand edits",
                 icon: <Award className="w-8 h-8" />,
               },
               {
-                number: counters.clients,
-                suffix: "+",
-                label: "Satisfied Clients",
+                title: "Coaches, Founders & YouTubers",
+                description: "Repurpose, engage, convert",
+                icon: <Monitor className="w-8 h-8" />,
+              },
+            ].map((item, index) => (
+              <div key={index} className="text-center group">
+                <div className="bg-gradient-to-br from-gray-800 to-gray-900 p-8 rounded-2xl border border-red-500/20 hover:border-red-500/40 transition-all duration-500 hover:scale-105 shadow-xl hover:shadow-red-500/10">
+                  <div className="text-red-500 mb-4 flex justify-center group-hover:scale-110 transition-transform duration-300">
+                    {item.icon}
+                  </div>
+                  <h3 className="text-xl font-black text-white mb-3 uppercase tracking-wide">{item.title}</h3>
+                  <p className="text-gray-400 font-semibold">{item.description}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <div className="grid md:grid-cols-4 gap-8">
+            {[
+              {
+                number: "24-72",
+                suffix: "HRS",
+                label: "Fast Turnarounds",
+                icon: <Award className="w-8 h-8" />,
+              },
+              {
+                number: "∞",
+                suffix: "",
+                label: "Unlimited Revisions",
                 icon: <Users className="w-8 h-8" />,
               },
-              { number: counters.projects4k, suffix: "+", label: "4K Projects", icon: <Monitor className="w-8 h-8" /> },
+              { number: "1:1", suffix: "", label: "Dedicated Editors", icon: <Monitor className="w-8 h-8" /> },
               {
-                number: counters.totalProjects,
-                suffix: "+",
-                label: "Projects Completed",
+                number: "100%",
+                suffix: "",
+                label: "Trend-Aware Creatives",
                 icon: <Film className="w-8 h-8" />,
               },
             ].map((stat, index) => (
@@ -417,10 +456,10 @@ export default function VideoEditingLanding() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           <div className="text-center mb-20">
             <h2 className="text-5xl font-black uppercase mb-6 tracking-wider">
-              OUR <span className="text-red-500">SERVICES</span>
+              WHAT WE <span className="text-red-500">EDIT</span>
             </h2>
             <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-              Professional video editing and WebApp Creation services tailored to your needs
+              We edit with purpose — to help you stand out, save time, and stay consistent.
             </p>
           </div>
 
@@ -470,15 +509,18 @@ export default function VideoEditingLanding() {
         </div>
       </section>
 
-      {/* Popular Categories */}
-      <section className="py-32 bg-gradient-to-b from-black to-gray-900 relative">
+      {/* Portfolio Categories */}
+      <section id="portfolio-section" className="py-32 bg-gradient-to-b from-black to-gray-900 relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-20">
             <h2 className="text-5xl font-black uppercase mb-6 tracking-wider">
-              SOME OF THE POPULAR
+              SEE WHAT WE'VE
               <br />
-              VIDEO CATEGORIES WE <span className="text-red-500">SUPPORT</span>
+              <span className="text-red-500">CREATED</span>
             </h2>
+            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+              From client reels to YouTube shorts - watch our portfolio in action
+            </p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -507,6 +549,12 @@ export default function VideoEditingLanding() {
               </div>
             ))}
           </div>
+
+          <div className="text-center mt-12">
+            <Button className="bg-gradient-to-r from-red-500 to-red-600 hover:from-red-600 hover:to-red-700 text-white px-10 py-4 text-lg rounded-full font-bold shadow-2xl hover:shadow-red-500/25 transition-all duration-500 hover:scale-105 glow-red">
+              WATCH FULL PORTFOLIO
+            </Button>
+          </div>
         </div>
       </section>
 
@@ -516,9 +564,9 @@ export default function VideoEditingLanding() {
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           <div className="text-center mb-20">
-            <div className="text-8xl font-black text-gray-800 mb-8 select-none">V</div>
+            <div className="text-8xl font-black text-gray-800 mb-8 select-none">✨</div>
             <h2 className="text-5xl font-black uppercase mb-6 tracking-wider">
-              HOW DOES THIS <span className="text-red-500">WORK?</span>
+              HOW IT <span className="text-red-500">WORKS</span>
             </h2>
           </div>
 
@@ -558,16 +606,16 @@ export default function VideoEditingLanding() {
           </div>
         </div>
       </section>
-
+      
       {/* Testimonials Section */}
       <section className="py-32 bg-gradient-to-b from-gray-900 to-black relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-20">
-            <div className="text-sm text-red-400 font-bold uppercase tracking-wider mb-4">CLIENTS FEEDBACK</div>
+            <div className="text-sm text-red-400 font-bold uppercase tracking-wider mb-4">CLIENT SUCCESS</div>
             <h2 className="text-5xl font-black uppercase mb-6 tracking-wider">
               WHAT OUR CLIENTS SAY
               <br />
-              ABOUT MOM <span className="text-red-500">ENTO</span>
+              ABOUT MOMENTO<span className="text-red-500">.BUZZ</span>
             </h2>
           </div>
 
@@ -587,7 +635,8 @@ export default function VideoEditingLanding() {
                   <blockquote className="text-gray-300 mb-8 leading-relaxed italic">"{testimonial.text}"</blockquote>
 
                   <div className="text-center">
-                    <div className="font-black text-white text-lg uppercase tracking-wide mb-1">{testimonial.role}</div>
+                    <div className="font-black text-white text-lg uppercase tracking-wide mb-1">{testimonial.name}</div>
+                    <div className="text-red-400 text-sm font-bold">{testimonial.role}</div>
                     <div className="text-gray-400 text-sm">{testimonial.company}</div>
                   </div>
                 </CardContent>
@@ -622,7 +671,8 @@ export default function VideoEditingLanding() {
           </Accordion>
         </div>
       </section>
-{/* CTA Section */}
+
+      {/* CTA Section */}
       <section className="py-32 bg-gradient-to-br from-red-900/20 via-black to-gray-900 relative overflow-hidden">
         <div className="absolute inset-0">
           <div className="absolute top-1/2 left-1/2 w-96 h-96 bg-red-500/10 rounded-full filter blur-3xl transform -translate-x-1/2 -translate-y-1/2 animate-pulse"></div>
@@ -630,16 +680,25 @@ export default function VideoEditingLanding() {
 
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative">
           <h2 className="text-6xl font-black uppercase mb-8 tracking-wider">
-            GET A FREE <span className="text-red-500">TRIAL</span>
+            READY TO CREATE
+            <br />
+            <span className="text-red-500">SCROLL-STOPPING</span> CONTENT?
           </h2>
           <p className="text-xl text-gray-300 mb-12 leading-relaxed">
-            Experience our professional video editing services with no commitment. See the quality and precision that
-            sets us apart.
+            Experience our professional content creation services with no commitment. See the quality and engagement that sets your brand apart.
           </p>
 
-          <Button className="bg-gradient-to-r from-red-500 to-red-600 hover:from-red-600 hover:to-red-700 text-white px-12 py-6 text-xl rounded-full font-black shadow-2xl hover:shadow-red-500/25 transition-all duration-500 hover:scale-110 glow-red uppercase tracking-wider">
-            START FREE TRIAL NOW
-          </Button>
+          <div className="flex flex-col sm:flex-row gap-6 justify-center">
+            <Button className="bg-gradient-to-r from-red-500 to-red-600 hover:from-red-600 hover:to-red-700 text-white px-12 py-6 text-xl rounded-full font-black shadow-2xl hover:shadow-red-500/25 transition-all duration-500 hover:scale-110 glow-red uppercase tracking-wider">
+              GET FREE DEMO NOW
+            </Button>
+            <Button
+              variant="outline"
+              className="border-2 border-red-500 text-red-500 hover:bg-red-500/10 px-12 py-6 text-xl rounded-full font-black transition-all duration-500 hover:scale-110 bg-transparent uppercase tracking-wider"
+            >
+              WATCH PORTFOLIO
+            </Button>
+          </div>
         </div>
       </section>
 
@@ -649,12 +708,11 @@ export default function VideoEditingLanding() {
           <div className="grid md:grid-cols-4 gap-12">
             <div className="col-span-2">
               <div className="text-3xl font-black tracking-wider mb-6">
-                MOM<span className="text-red-500">ENTO</span>
-                <div className="text-sm text-gray-400 font-normal">Your editor on-call</div>
+                MOMENTO<span className="text-red-500">.BUZZ</span>
+                <div className="text-sm text-gray-400 font-normal">Craft moments that move</div>
               </div>
               <p className="text-gray-400 mb-8 leading-relaxed">
-                Professional video editing and post-production services for content creators and production houses
-                worldwide.
+                Professional content creation and video editing services for creators, agencies, and brands who want to stand out in the digital world.
               </p>
               <div className="flex space-x-4">
                 {[Instagram, Twitter, Linkedin, Youtube].map((Icon, index) => (
@@ -673,7 +731,7 @@ export default function VideoEditingLanding() {
             <div>
               <h4 className="font-black text-lg mb-6 text-white uppercase tracking-wider">Services</h4>
               <ul className="space-y-4 text-gray-400">
-                {["Video Editing", "Color Correction", "Visual Effects", "Audio Editing", "Motion Graphics"].map(
+                {["Reels & Shorts", "Promo Videos", "Content Repurposing", "YouTube Editing", "Brand Content"].map(
                   (item) => (
                     <li key={item}>
                       <a href="#" className="hover:text-red-500 transition-colors duration-300 font-semibold">
@@ -689,37 +747,38 @@ export default function VideoEditingLanding() {
               <h4 className="font-black text-lg mb-6 text-white uppercase tracking-wider">Contact</h4>
               <div className="space-y-4 text-gray-400">
                 <div className="flex items-center space-x-3">
-                  <Phone className="w-5 h-5 text-red-500" />
-                  <span className="font-semibold">+91 90011 20595</span>
+                  <MessageCircle className="w-5 h-5 text-red-500" />
+                  <span className="font-semibold">24-72 Hour Turnaround</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <Mail className="w-5 h-5 text-red-500" />
-                  <span className="font-semibold">info@videocaddy.com</span>
+                  <span className="font-semibold">hello@momento.buzz</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <MapPin className="w-5 h-5 text-red-500" />
-                  <span className="font-semibold">Global Services</span>
+                  <span className="font-semibold">Global Creative Services</span>
                 </div>
               </div>
             </div>
           </div>
 
           <div className="border-t border-red-500/20 mt-12 pt-8 text-center text-gray-400">
-            <p>&copy; {new Date().getFullYear()} MOMENTO. All rights reserved.</p>
+            <p>&copy; {new Date().getFullYear()} MOMENTO.BUZZ. All rights reserved. Every Frame. A Feeling.</p>
           </div>
         </div>
-      </footer> 
-          {/* Sticky Chat Button */}
+      </footer>
+
+      {/* Sticky Chat Button */}
       <div className="fixed bottom-8 right-8 z-50">
-        <Button className="w-16 h-16 rounded-full bg-gradient-to-r from-red-500 to-red-600 hover:from-red-600 hover:to-red-700 text-white shadow-2xl hover:shadow-red-500/50 transition-all duration-300 hover:scale-110 animate-bounce glow-red"
-        onClick={() => {
-          window.location.href = "https://wa.me/919001120595?text=Hello%20Momento,%20I%20would%20like%20to%20know%20more%20about%20your%20services.";
-        }}
-        
+        <Button 
+          className="w-16 h-16 rounded-full bg-gradient-to-r from-red-500 to-red-600 hover:from-red-600 hover:to-red-700 text-white shadow-2xl hover:shadow-red-500/50 transition-all duration-300 hover:scale-110 animate-bounce glow-red"
+          onClick={() => {
+            window.location.href = "https://wa.me/919001120595?text=Hello%20Momento.buzz,%20I%20want%20to%20create%20scroll-stopping%20content!";
+          }}
         >
           <MessageCircle className="w-6 h-6" />
         </Button>
       </div>
     </div>
   )
-}    
+}
