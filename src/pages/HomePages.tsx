@@ -390,21 +390,37 @@ export default function VideoEditingLanding() {
       </section>
 
       {/* Who We Help Section */}
-      <section id="stats-section" className="py-20 bg-gradient-to-b from-black to-gray-900 relative">
-        <div className="absolute inset-0 bg-grid-red opacity-5"></div>
+      <section id="stats-section" className="py-20 relative overflow-hidden">
+        {/* Background Video */}
+        <div className="absolute inset-0 z-0">
+          <video autoPlay muted loop playsInline className="transform: rotate(180deg); absolute inset-0 w-full h-full object-cover opacity-100">
+            <source src="/video2.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+          {/* Video overlay */}
+          <div className="absolute inset-0 bg-black/70"></div>
+        </div>
 
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+        {/* Background Effects */}
+        <div className="absolute inset-0 z-10">
+          <div className="absolute inset-0 bg-gradient-to-b from-black via-gray-900/80 to-black"></div>
+          <div className="absolute inset-0 bg-grid-red opacity-5"></div>
+          {/* Floating elements */}
+          <div className="absolute top-1/4 left-1/6 w-64 h-64 bg-red-500/5 rounded-full filter blur-sm animate-pulse"></div>
+          <div className="absolute bottom-1/4 right-1/6 w-80 h-80 bg-red-600/5 rounded-full filter blur-l animate-pulse delay-1000"></div>
+        </div>
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20">
           <div className="text-center mb-16">
             <h2 className="text-5xl font-black uppercase mb-6 tracking-wider">
               BUILT FOR CREATORS WHO WANT
               <br />
-              MORE THAN JUST <span className="text-red-500">LIKES</span>
+              MORE THAN JUST <span className="text-red-500 neon-text">LIKES</span>
             </h2>
             <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed">
               No editing apps. No burnout. Just pro-level content, done for you.
             </p>
           </div>
-
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
             {[
               {
@@ -424,7 +440,7 @@ export default function VideoEditingLanding() {
               },
             ].map((item, index) => (
               <div key={index} className="text-center group">
-                <div className="bg-gradient-to-br from-gray-800 to-gray-900 p-8 rounded-2xl border border-red-500/20 hover:border-red-500/40 transition-all duration-500 hover:scale-105 shadow-xl hover:shadow-red-500/10">
+                <div className="glass bg-gradient-to-br from-gray-800/50 to-gray-900/50 p-8 rounded-2xl border border-red-500/20 hover:border-red-500/40 transition-all duration-500 hover:scale-105 shadow-xl hover:shadow-red-500/10 backdrop-blur-sm">
                   <div className="text-red-500 mb-4 flex justify-center group-hover:scale-110 transition-transform duration-300">
                     {item.icon}
                   </div>
@@ -434,7 +450,6 @@ export default function VideoEditingLanding() {
               </div>
             ))}
           </div>
-
           <div className="grid md:grid-cols-4 gap-8">
             {[
               {
@@ -458,7 +473,7 @@ export default function VideoEditingLanding() {
               },
             ].map((stat, index) => (
               <div key={index} className="text-center group">
-                <div className="bg-gradient-to-br from-gray-800 to-gray-900 p-8 rounded-2xl border border-red-500/20 hover:border-red-500/40 transition-all duration-500 hover:scale-105 shadow-xl hover:shadow-red-500/10">
+                <div className="glass bg-gradient-to-br from-gray-800/50 to-gray-900/50 p-8 rounded-2xl border border-red-500/20 hover:border-red-500/40 transition-all duration-500 hover:scale-105 shadow-xl hover:shadow-red-500/10 backdrop-blur-sm pulse-red">
                   <div className="text-red-500 mb-4 flex justify-center group-hover:scale-110 transition-transform duration-300">
                     {stat.icon}
                   </div>
