@@ -386,27 +386,59 @@ export default function VideoEditingLanding() {
                 </Button>
               </div>
               {/* Contact Options */}
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-4 pt-8">
-                {[
-                  { icon: <Phone className="w-5 h-5" />, label: "CALL US" },
-                  { icon: <MessageCircle className="w-5 h-5" />, label: "CHAT NOW" },
-                  { icon: <Mail className="w-5 h-5" />, label: "EMAIL" },
-                  { icon: <Zap className="w-5 h-5" />, label: "24-72HR" },
-                ].map((item, index) => (
-                  <Button
-                    key={index}
-                    variant="ghost"
-                    className="flex flex-col items-center p-4 hover:bg-red-500/10 rounded-lg transition-all duration-300 group"
-                  >
-                    <div className="text-red-500 group-hover:scale-110 transition-transform duration-300">
-                      {item.icon}
-                    </div>
-                    <span className="text-xs mt-2 text-gray-400 group-hover:text-white transition-colors duration-300">
-                      {item.label}
-                    </span>
-                  </Button>
-                ))}
-              </div>
+
+             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 pt-8">
+  {[
+    { 
+      icon: <Phone className="w-5 h-5" />, 
+      label: "CALL US",
+      onClick: () => {
+        // Option 1: Show alert then open dialer
+        window.location.href = "tel:+919001120595";
+        
+        // Option 2: Just open dialer directly
+        // window.location.href = "tel:+919001120595";
+      }
+    },
+    { 
+      icon: <MessageCircle className="w-5 h-5" />, 
+      label: "CHAT NOW",
+      onClick: () => {
+        window.location.href = "https://wa.me/919001120595?text=Hello%20Momento.buzz,%20I%20want%20to%20create%20scroll-stopping%20content!";
+      }
+    },
+    { 
+      icon: <Mail className="w-5 h-5" />, 
+      label: "EMAIL",
+      onClick: () => {
+        window.location.href = "mailto:contact@yourcompany.com";
+      }
+    },
+    { 
+      icon: <Zap className="w-5 h-5" />, 
+      label: "24-72HR",
+      onClick: () => {
+        alert("We respond within 24-72 hours!");
+      }
+    },
+  ].map((item, index) => (
+    <Button
+      key={index}
+      variant="ghost"
+      className="flex flex-col items-center p-4 hover:bg-red-500/10 rounded-lg transition-all duration-300 group"
+      onClick={item.onClick}
+    >
+      <div className="text-red-500 group-hover:scale-110 transition-transform duration-300">
+        {item.icon}
+      </div>
+      <span className="text-xs mt-2 text-gray-400 group-hover:text-white transition-colors duration-300">
+        {item.label}
+      </span>
+    </Button>
+  ))}
+</div>
+
+
             </div>
             
             <div className="relative animate-slide-in-right z-20">
